@@ -1,0 +1,22 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.27004.2009
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{159641D6-6404-4A2A-AE62-294DE0FE8301}") = "KawiarniaETL", "KawiarniaETL\KawiarniaETL.dtproj", "{E8809DA5-748E-4502-BC9C-2F5A29E7BBF5}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Development|Default = Development|Default
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{E8809DA5-748E-4502-BC9C-2F5A29E7BBF5}.Development|Default.ActiveCfg = Development
+		{E8809DA5-748E-4502-BC9C-2F5A29E7BBF5}.Development|Default.Build.0 = Development
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {5770552B-B8BD-4334-A194-36F2F8F53F8A}
+	EndGlobalSection
+EndGlobal

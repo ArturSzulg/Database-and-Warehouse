@@ -1,0 +1,23 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.27004.2009
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{D2ABAB84-BF74-430A-B69E-9DC6D40DDA17}") = "kawiarnia", "kawiarnia\kawiarnia.dwproj", "{705C62FE-0FF2-496E-AAC2-BFFD27374C21}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Development|Default = Development|Default
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{705C62FE-0FF2-496E-AAC2-BFFD27374C21}.Development|Default.ActiveCfg = Development
+		{705C62FE-0FF2-496E-AAC2-BFFD27374C21}.Development|Default.Build.0 = Development
+		{705C62FE-0FF2-496E-AAC2-BFFD27374C21}.Development|Default.Deploy.0 = Development
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {AA412A3D-0344-47A3-8192-28599FDBEB75}
+	EndGlobalSection
+EndGlobal

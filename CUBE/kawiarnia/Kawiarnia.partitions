@@ -1,0 +1,202 @@
+﻿<Cube xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ddl2="http://schemas.microsoft.com/analysisservices/2003/engine/2" xmlns:ddl2_2="http://schemas.microsoft.com/analysisservices/2003/engine/2/2" xmlns:ddl100_100="http://schemas.microsoft.com/analysisservices/2008/engine/100/100" xmlns:ddl200="http://schemas.microsoft.com/analysisservices/2010/engine/200" xmlns:ddl200_200="http://schemas.microsoft.com/analysisservices/2010/engine/200/200" xmlns:ddl300="http://schemas.microsoft.com/analysisservices/2011/engine/300" xmlns:ddl300_300="http://schemas.microsoft.com/analysisservices/2011/engine/300/300" xmlns:ddl400="http://schemas.microsoft.com/analysisservices/2012/engine/400" xmlns:ddl400_400="http://schemas.microsoft.com/analysisservices/2012/engine/400/400" xmlns:ddl500="http://schemas.microsoft.com/analysisservices/2013/engine/500" xmlns:ddl500_500="http://schemas.microsoft.com/analysisservices/2013/engine/500/500" xmlns:dwd="http://schemas.microsoft.com/DataWarehouse/Designer/1.0" dwd:design-time-name="e4f40cc6-c077-46d5-a763-7c9b95bf6451" xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">
+  <ID>Kawiarnia</ID>
+  <MeasureGroups>
+    <MeasureGroup>
+      <ID>Składanie Zamówienia Na Produkt</ID>
+      <Partitions>
+        <Partition dwd:design-time-name="e4ef20ba-928e-4141-8d30-339677e4cff3">
+          <ID>Składanie Zamówienia Na Produkt</ID>
+          <Name>Składanie Zamówienia Na Produkt</Name>
+          <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+          <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+          <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
+          <State>Unprocessed</State>
+          <Source xsi:type="DsvTableBinding" dwd:design-time-name="9215d70f-a934-482a-ab97-84ab37fbb45a">
+            <DataSourceViewID>Kawiarnia</DataSourceViewID>
+            <TableID>dbo_Składanie_zamówienia_na_produkt</TableID>
+          </Source>
+          <StorageMode>Molap</StorageMode>
+          <CurrentStorageMode>Molap</CurrentStorageMode>
+          <ProcessingMode>Regular</ProcessingMode>
+          <EstimatedRows>6</EstimatedRows>
+          <AggregationDesignID>AggregationDesign</AggregationDesignID>
+        </Partition>
+      </Partitions>
+      <AggregationDesigns>
+        <AggregationDesign>
+          <ID>AggregationDesign</ID>
+          <Name>AggregationDesign</Name>
+          <CreatedTimestamp>2017-12-03T14:34:05.123333Z</CreatedTimestamp>
+          <LastSchemaUpdate>2017-12-03T14:34:05.123333Z</LastSchemaUpdate>
+          <EstimatedRows>6</EstimatedRows>
+          <Dimensions>
+            <Dimension>
+              <CubeDimensionID>Daty</CubeDimensionID>
+              <Attributes>
+                <Attribute>
+                  <AttributeID>ID Daty</AttributeID>
+                  <EstimatedCount>1074</EstimatedCount>
+                </Attribute>
+                <Attribute>
+                  <AttributeID>Daty</AttributeID>
+                </Attribute>
+                <Attribute>
+                  <AttributeID>Rok</AttributeID>
+                  <EstimatedCount>3</EstimatedCount>
+                </Attribute>
+                <Attribute>
+                  <AttributeID>Miesiąc</AttributeID>
+                </Attribute>
+                <Attribute>
+                  <AttributeID>Dzień Tygodnia</AttributeID>
+                </Attribute>
+                <Attribute>
+                  <AttributeID>Święto</AttributeID>
+                </Attribute>
+              </Attributes>
+            </Dimension>
+            <Dimension>
+              <CubeDimensionID>ID Czasu Rozpoczęcia</CubeDimensionID>
+              <Attributes>
+                <Attribute>
+                  <AttributeID>ID Czasu</AttributeID>
+                  <EstimatedCount>192</EstimatedCount>
+                </Attribute>
+                <Attribute>
+                  <AttributeID>Pora Dnia</AttributeID>
+                  <EstimatedCount>4</EstimatedCount>
+                </Attribute>
+                <Attribute>
+                  <AttributeID>Godzina</AttributeID>
+                </Attribute>
+                <Attribute>
+                  <AttributeID>Minuta</AttributeID>
+                </Attribute>
+              </Attributes>
+            </Dimension>
+            <Dimension>
+              <CubeDimensionID>Produkt</CubeDimensionID>
+              <Attributes>
+                <Attribute>
+                  <AttributeID>ID Produktu</AttributeID>
+                  <EstimatedCount>3</EstimatedCount>
+                </Attribute>
+                <Attribute>
+                  <AttributeID>Rodzaj</AttributeID>
+                  <EstimatedCount>2</EstimatedCount>
+                </Attribute>
+                <Attribute>
+                  <AttributeID>Nazwa</AttributeID>
+                </Attribute>
+              </Attributes>
+            </Dimension>
+            <Dimension>
+              <CubeDimensionID>ID Czasu Zakończenia</CubeDimensionID>
+              <Attributes>
+                <Attribute>
+                  <AttributeID>ID Czasu</AttributeID>
+                  <EstimatedCount>192</EstimatedCount>
+                </Attribute>
+                <Attribute>
+                  <AttributeID>Pora Dnia</AttributeID>
+                  <EstimatedCount>4</EstimatedCount>
+                </Attribute>
+                <Attribute>
+                  <AttributeID>Godzina</AttributeID>
+                </Attribute>
+                <Attribute>
+                  <AttributeID>Minuta</AttributeID>
+                </Attribute>
+              </Attributes>
+            </Dimension>
+            <Dimension>
+              <CubeDimensionID>Kelner</CubeDimensionID>
+              <Attributes>
+                <Attribute>
+                  <AttributeID>ID Kelnera</AttributeID>
+                  <EstimatedCount>3</EstimatedCount>
+                </Attribute>
+                <Attribute>
+                  <AttributeID>ID Szefa</AttributeID>
+                </Attribute>
+                <Attribute>
+                  <AttributeID>Pesel</AttributeID>
+                </Attribute>
+                <Attribute>
+                  <AttributeID>Imię I Nazwisko</AttributeID>
+                </Attribute>
+                <Attribute>
+                  <AttributeID>Przedział Wiekowy</AttributeID>
+                </Attribute>
+                <Attribute>
+                  <AttributeID>Wykształcenie</AttributeID>
+                  <EstimatedCount>3</EstimatedCount>
+                </Attribute>
+              </Attributes>
+            </Dimension>
+            <Dimension>
+              <CubeDimensionID>Składanie Zamówienia Na Produkt</CubeDimensionID>
+              <Attributes>
+                <Attribute>
+                  <AttributeID>Numer Zamówienia</AttributeID>
+                  <EstimatedCount>5</EstimatedCount>
+                </Attribute>
+              </Attributes>
+            </Dimension>
+          </Dimensions>
+          <Aggregations>
+            <Aggregation>
+              <ID>Aggregation 0</ID>
+              <Name>Aggregation 0</Name>
+              <Dimensions>
+                <Dimension>
+                  <CubeDimensionID>Daty</CubeDimensionID>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>ID Czasu Rozpoczęcia</CubeDimensionID>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Produkt</CubeDimensionID>
+                  <Attributes>
+                    <Attribute>
+                      <AttributeID>Rodzaj</AttributeID>
+                    </Attribute>
+                  </Attributes>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>ID Czasu Zakończenia</CubeDimensionID>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Kelner</CubeDimensionID>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Składanie Zamówienia Na Produkt</CubeDimensionID>
+                </Dimension>
+              </Dimensions>
+            </Aggregation>
+          </Aggregations>
+        </AggregationDesign>
+      </AggregationDesigns>
+    </MeasureGroup>
+    <MeasureGroup>
+      <ID>Statystyka Wejść</ID>
+      <Partitions>
+        <Partition dwd:design-time-name="b69499d0-919c-48ab-9a81-499f84dca5f8">
+          <ID>Statystyka Wejść</ID>
+          <Name>Statystyka Wejść</Name>
+          <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+          <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+          <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
+          <State>Unprocessed</State>
+          <Source xsi:type="DsvTableBinding" dwd:design-time-name="cc491bfd-d14c-4faa-814b-cc34808191d1">
+            <DataSourceViewID>Kawiarnia</DataSourceViewID>
+            <TableID>dbo_Statystyka_wejść</TableID>
+          </Source>
+          <StorageMode>Molap</StorageMode>
+          <CurrentStorageMode>Molap</CurrentStorageMode>
+          <ProcessingMode>Regular</ProcessingMode>
+        </Partition>
+      </Partitions>
+    </MeasureGroup>
+  </MeasureGroups>
+</Cube>

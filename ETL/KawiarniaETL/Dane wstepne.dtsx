@@ -1,0 +1,1014 @@
+﻿<?xml version="1.0"?>
+<DTS:Executable xmlns:DTS="www.microsoft.com/SqlServer/Dts"
+  DTS:refId="Package"
+  DTS:CreationDate="12/21/2017 11:46:23 PM"
+  DTS:CreationName="Microsoft.Package"
+  DTS:CreatorComputerName="LAPTOP-RK6H1G74"
+  DTS:CreatorName="LAPTOP-RK6H1G74\Klaudia"
+  DTS:DTSID="{F140EA55-C6CB-4462-8D3C-04A0F1FBDD6E}"
+  DTS:ExecutableType="Microsoft.Package"
+  DTS:LastModifiedProductVersion="14.0.0800.98"
+  DTS:LocaleID="1045"
+  DTS:ObjectName="Dane wstepne"
+  DTS:PackageType="5"
+  DTS:VersionBuild="42"
+  DTS:VersionGUID="{C46A2D28-CA87-4AFD-BFFF-C99121F9064D}">
+  <DTS:Property
+    DTS:Name="PackageFormatVersion">8</DTS:Property>
+  <DTS:ConnectionManagers>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[Czas]"
+      DTS:CreationName="FLATFILE"
+      DTS:DTSID="{FCBBD5B4-74CF-43A2-AB76-876CAEF0E5AA}"
+      DTS:ObjectName="Czas">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:Format="Delimited"
+          DTS:LocaleID="1045"
+          DTS:HeaderRowDelimiter="_x000D__x000A_"
+          DTS:ColumnNamesInFirstDataRow="True"
+          DTS:RowDelimiter=""
+          DTS:TextQualifier="_x003C_none_x003E_"
+          DTS:CodePage="1250"
+          DTS:ConnectionString="C:\Users\Klaudia\source\repos\ConsoleApplication1\ConsoleApplication1\czas.csv">
+          <DTS:FlatFileColumns>
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x003B_"
+              DTS:DataType="72"
+              DTS:TextQualified="True"
+              DTS:ObjectName="ID_Czasu"
+              DTS:DTSID="{A6E690ED-394D-4CE5-A6E3-3641A9D9762F}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x003B_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Pora_Dnia"
+              DTS:DTSID="{85D4698D-3A49-49FF-BF60-5930A308D729}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x003B_"
+              DTS:DataType="21"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Godzina"
+              DTS:DTSID="{D36EF965-063D-4DAE-A110-E4C0498744DD}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x000D__x000A_"
+              DTS:DataType="21"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Minuta"
+              DTS:DTSID="{1879BDAB-1197-4E51-93DA-EE47D2FF8B58}"
+              DTS:CreationName="" />
+          </DTS:FlatFileColumns>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[Data]"
+      DTS:CreationName="FLATFILE"
+      DTS:DTSID="{36BD789B-84E2-4631-88A7-D5EE3D1641A4}"
+      DTS:ObjectName="Data">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:Format="Delimited"
+          DTS:LocaleID="1045"
+          DTS:HeaderRowDelimiter="_x000D__x000A_"
+          DTS:ColumnNamesInFirstDataRow="True"
+          DTS:RowDelimiter=""
+          DTS:TextQualifier="_x003C_none_x003E_"
+          DTS:CodePage="1250"
+          DTS:ConnectionString="C:\Users\Klaudia\source\repos\ConsoleApplication1\ConsoleApplication1\data.csv">
+          <DTS:FlatFileColumns>
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x003B_"
+              DTS:DataType="72"
+              DTS:TextQualified="True"
+              DTS:ObjectName="ID_Daty"
+              DTS:DTSID="{5694286F-3374-4E3E-A4D8-BBCF7CD8B739}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x003B_"
+              DTS:DataType="7"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Data"
+              DTS:DTSID="{469604C6-5450-45B0-AC5B-CDA9A046AFAB}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x003B_"
+              DTS:MaximumWidth="4"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Rok"
+              DTS:DTSID="{303C7EB9-6D4A-4E5F-919C-8C581C23C714}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x003B_"
+              DTS:MaximumWidth="15"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Miesiąc"
+              DTS:DTSID="{40679C29-641F-41A5-AB6A-BA0A4522380F}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x003B_"
+              DTS:MaximumWidth="10"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Dzień"
+              DTS:DTSID="{F2700396-2DEF-496A-B645-13B2713F8791}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x003B_"
+              DTS:MaximumWidth="15"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Dzień_Tygodnia"
+              DTS:DTSID="{9F4F41CB-81BE-440C-9361-F07B1310361B}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x000D__x000A_"
+              DTS:MaximumWidth="128"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Czy_swieto"
+              DTS:DTSID="{1BACC6F8-E7F1-410E-AD38-0FD3F6DC335A}"
+              DTS:CreationName="" />
+          </DTS:FlatFileColumns>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+  </DTS:ConnectionManagers>
+  <DTS:Variables />
+  <DTS:Executables>
+    <DTS:Executable
+      DTS:refId="Package\Wypełnienie czasu i daty"
+      DTS:CreationName="Microsoft.Pipeline"
+      DTS:Description="Data Flow Task"
+      DTS:DTSID="{A8D183CB-3BC9-4A9F-BF34-EFF87ECEC30E}"
+      DTS:ExecutableType="Microsoft.Pipeline"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Wypełnienie czasu i daty"
+      DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <pipeline
+          version="1">
+          <components>
+            <component
+              refId="Package\Wypełnienie czasu i daty\Czas - CSV"
+              componentClassID="Microsoft.FlatFileSource"
+              contactInfo="Flat File Source;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
+              description="Flat File Source"
+              localeId="1045"
+              name="Czas - CSV"
+              usesDispositions="true"
+              version="1">
+              <properties>
+                <property
+                  dataType="System.Boolean"
+                  description="Specifies whether zero-length columns are treated as null."
+                  name="RetainNulls">false</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of an output column containing the file name. If no name is specified, no output column containing the file name will be generated."
+                  name="FileNameColumnName"></property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Wypełnienie czasu i daty\Czas - CSV.Connections[FlatFileConnection]"
+                  connectionManagerID="Package.ConnectionManagers[Czas]"
+                  connectionManagerRefId="Package.ConnectionManagers[Czas]"
+                  name="FlatFileConnection" />
+              </connections>
+              <outputs>
+                <output
+                  refId="Package\Wypełnienie czasu i daty\Czas - CSV.Outputs[Flat File Source Output]"
+                  name="Flat File Source Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Wypełnienie czasu i daty\Czas - CSV.Outputs[Flat File Source Output].Columns[Pora_Dnia]"
+                      codePage="1250"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Wypełnienie czasu i daty\Czas - CSV.Outputs[Flat File Source Output].ExternalColumns[Pora_Dnia]"
+                      length="50"
+                      lineageId="Package\Wypełnienie czasu i daty\Czas - CSV.Outputs[Flat File Source Output].Columns[Pora_Dnia]"
+                      name="Pora_Dnia"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Wypełnienie czasu i daty\Czas - CSV.Outputs[Flat File Source Output].Columns[Godzina]"
+                      dataType="ui8"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Wypełnienie czasu i daty\Czas - CSV.Outputs[Flat File Source Output].ExternalColumns[Godzina]"
+                      lineageId="Package\Wypełnienie czasu i daty\Czas - CSV.Outputs[Flat File Source Output].Columns[Godzina]"
+                      name="Godzina"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Wypełnienie czasu i daty\Czas - CSV.Outputs[Flat File Source Output].Columns[Minuta]"
+                      dataType="ui8"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Wypełnienie czasu i daty\Czas - CSV.Outputs[Flat File Source Output].ExternalColumns[Minuta]"
+                      lineageId="Package\Wypełnienie czasu i daty\Czas - CSV.Outputs[Flat File Source Output].Columns[Minuta]"
+                      name="Minuta"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Wypełnienie czasu i daty\Czas - CSV.Outputs[Flat File Source Output].ExternalColumns[ID_Czasu]"
+                      dataType="guid"
+                      name="ID_Czasu" />
+                    <externalMetadataColumn
+                      refId="Package\Wypełnienie czasu i daty\Czas - CSV.Outputs[Flat File Source Output].ExternalColumns[Pora_Dnia]"
+                      codePage="1250"
+                      dataType="str"
+                      length="50"
+                      name="Pora_Dnia" />
+                    <externalMetadataColumn
+                      refId="Package\Wypełnienie czasu i daty\Czas - CSV.Outputs[Flat File Source Output].ExternalColumns[Godzina]"
+                      dataType="ui8"
+                      name="Godzina" />
+                    <externalMetadataColumn
+                      refId="Package\Wypełnienie czasu i daty\Czas - CSV.Outputs[Flat File Source Output].ExternalColumns[Minuta]"
+                      dataType="ui8"
+                      name="Minuta" />
+                  </externalMetadataColumns>
+                </output>
+                <output
+                  refId="Package\Wypełnienie czasu i daty\Czas - CSV.Outputs[Flat File Source Error Output]"
+                  isErrorOut="true"
+                  name="Flat File Source Error Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Wypełnienie czasu i daty\Czas - CSV.Outputs[Flat File Source Error Output].Columns[Flat File Source Error Output Column]"
+                      codePage="1250"
+                      dataType="text"
+                      description="Flat File Source Error Output Column"
+                      lineageId="Package\Wypełnienie czasu i daty\Czas - CSV.Outputs[Flat File Source Error Output].Columns[Flat File Source Error Output Column]"
+                      name="Flat File Source Error Output Column" />
+                    <outputColumn
+                      refId="Package\Wypełnienie czasu i daty\Czas - CSV.Outputs[Flat File Source Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Wypełnienie czasu i daty\Czas - CSV.Outputs[Flat File Source Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Wypełnienie czasu i daty\Czas - CSV.Outputs[Flat File Source Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Wypełnienie czasu i daty\Czas - CSV.Outputs[Flat File Source Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Wypełnienie czasu i daty\Czas HD"
+              componentClassID="Microsoft.OLEDBDestination"
+              contactInfo="OLE DB Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;4"
+              description="OLE DB Destination"
+              name="Czas HD"
+              usesDispositions="true"
+              version="4">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of the database object used to open a rowset."
+                  name="OpenRowset">[dbo].[Czas]</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the variable that contains the name of the database object used to open a rowset."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1250</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Forces the use of the DefaultCodePage property value when describing character data."
+                  name="AlwaysUseDefaultCodePage">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the mode used to access the database."
+                  name="AccessMode"
+                  typeConverter="AccessMode">3</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the values supplied for identity columns will be copied to the destination. If false, values for identity columns will be auto-generated at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepIdentity">false</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the columns containing null will have null inserted in the destination. If false, columns containing null will have their default values inserted at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepNulls">false</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies options to be used with fast load.  Applies only if fast load is turned on."
+                  name="FastLoadOptions">TABLOCK,CHECK_CONSTRAINTS</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies when commits are issued during data insertion.  A value of 0 specifies that one commit will be issued at the end of data insertion.  Applies only if fast load is turned on."
+                  name="FastLoadMaxInsertCommitSize">2147483647</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Wypełnienie czasu i daty\Czas HD.Connections[OleDbConnection]"
+                  connectionManagerID="{92BB8F9A-CAE1-48C1-9420-2BE2126C9E1C}:external"
+                  connectionManagerRefId="Project.ConnectionManagers[localhost.Kawiarnia]"
+                  description="The OLE DB runtime connection used to access the database."
+                  name="OleDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\Wypełnienie czasu i daty\Czas HD.Inputs[OLE DB Destination Input]"
+                  errorOrTruncationOperation="Insert"
+                  errorRowDisposition="FailComponent"
+                  hasSideEffects="true"
+                  name="OLE DB Destination Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Wypełnienie czasu i daty\Czas HD.Inputs[OLE DB Destination Input].Columns[Godzina]"
+                      cachedDataType="ui8"
+                      cachedName="Godzina"
+                      externalMetadataColumnId="Package\Wypełnienie czasu i daty\Czas HD.Inputs[OLE DB Destination Input].ExternalColumns[Godzina]"
+                      lineageId="Package\Wypełnienie czasu i daty\Czas - CSV.Outputs[Flat File Source Output].Columns[Godzina]" />
+                    <inputColumn
+                      refId="Package\Wypełnienie czasu i daty\Czas HD.Inputs[OLE DB Destination Input].Columns[Minuta]"
+                      cachedDataType="ui8"
+                      cachedName="Minuta"
+                      externalMetadataColumnId="Package\Wypełnienie czasu i daty\Czas HD.Inputs[OLE DB Destination Input].ExternalColumns[Minuta]"
+                      lineageId="Package\Wypełnienie czasu i daty\Czas - CSV.Outputs[Flat File Source Output].Columns[Minuta]" />
+                    <inputColumn
+                      refId="Package\Wypełnienie czasu i daty\Czas HD.Inputs[OLE DB Destination Input].Columns[Pora_Dnia]"
+                      cachedCodepage="1250"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="Pora_Dnia"
+                      externalMetadataColumnId="Package\Wypełnienie czasu i daty\Czas HD.Inputs[OLE DB Destination Input].ExternalColumns[PoraDnia]"
+                      lineageId="Package\Wypełnienie czasu i daty\Czas - CSV.Outputs[Flat File Source Output].Columns[Pora_Dnia]" />
+                  </inputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Wypełnienie czasu i daty\Czas HD.Inputs[OLE DB Destination Input].ExternalColumns[ID_Czasu]"
+                      dataType="i4"
+                      name="ID_Czasu" />
+                    <externalMetadataColumn
+                      refId="Package\Wypełnienie czasu i daty\Czas HD.Inputs[OLE DB Destination Input].ExternalColumns[PoraDnia]"
+                      codePage="1250"
+                      dataType="str"
+                      length="20"
+                      name="PoraDnia" />
+                    <externalMetadataColumn
+                      refId="Package\Wypełnienie czasu i daty\Czas HD.Inputs[OLE DB Destination Input].ExternalColumns[Godzina]"
+                      dataType="i4"
+                      name="Godzina" />
+                    <externalMetadataColumn
+                      refId="Package\Wypełnienie czasu i daty\Czas HD.Inputs[OLE DB Destination Input].ExternalColumns[Minuta]"
+                      dataType="i4"
+                      name="Minuta" />
+                  </externalMetadataColumns>
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Wypełnienie czasu i daty\Czas HD.Outputs[OLE DB Destination Error Output]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="OLE DB Destination Error Output"
+                  synchronousInputId="Package\Wypełnienie czasu i daty\Czas HD.Inputs[OLE DB Destination Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Wypełnienie czasu i daty\Czas HD.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Wypełnienie czasu i daty\Czas HD.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Wypełnienie czasu i daty\Czas HD.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Wypełnienie czasu i daty\Czas HD.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Wypełnienie czasu i daty\Data - CSV"
+              componentClassID="Microsoft.FlatFileSource"
+              contactInfo="Flat File Source;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
+              description="Flat File Source"
+              localeId="1045"
+              name="Data - CSV"
+              usesDispositions="true"
+              version="1">
+              <properties>
+                <property
+                  dataType="System.Boolean"
+                  description="Specifies whether zero-length columns are treated as null."
+                  name="RetainNulls">false</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of an output column containing the file name. If no name is specified, no output column containing the file name will be generated."
+                  name="FileNameColumnName"></property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Wypełnienie czasu i daty\Data - CSV.Connections[FlatFileConnection]"
+                  connectionManagerID="Package.ConnectionManagers[Data]"
+                  connectionManagerRefId="Package.ConnectionManagers[Data]"
+                  name="FlatFileConnection" />
+              </connections>
+              <outputs>
+                <output
+                  refId="Package\Wypełnienie czasu i daty\Data - CSV.Outputs[Flat File Source Output]"
+                  name="Flat File Source Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Wypełnienie czasu i daty\Data - CSV.Outputs[Flat File Source Output].Columns[Data]"
+                      dataType="date"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Wypełnienie czasu i daty\Data - CSV.Outputs[Flat File Source Output].ExternalColumns[Data]"
+                      lineageId="Package\Wypełnienie czasu i daty\Data - CSV.Outputs[Flat File Source Output].Columns[Data]"
+                      name="Data"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Wypełnienie czasu i daty\Data - CSV.Outputs[Flat File Source Output].Columns[Rok]"
+                      codePage="1250"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Wypełnienie czasu i daty\Data - CSV.Outputs[Flat File Source Output].ExternalColumns[Rok]"
+                      length="4"
+                      lineageId="Package\Wypełnienie czasu i daty\Data - CSV.Outputs[Flat File Source Output].Columns[Rok]"
+                      name="Rok"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Wypełnienie czasu i daty\Data - CSV.Outputs[Flat File Source Output].Columns[Miesiąc]"
+                      codePage="1250"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Wypełnienie czasu i daty\Data - CSV.Outputs[Flat File Source Output].ExternalColumns[Miesiąc]"
+                      length="15"
+                      lineageId="Package\Wypełnienie czasu i daty\Data - CSV.Outputs[Flat File Source Output].Columns[Miesiąc]"
+                      name="Miesiąc"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Wypełnienie czasu i daty\Data - CSV.Outputs[Flat File Source Output].Columns[Dzień]"
+                      codePage="1250"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Wypełnienie czasu i daty\Data - CSV.Outputs[Flat File Source Output].ExternalColumns[Dzień]"
+                      length="10"
+                      lineageId="Package\Wypełnienie czasu i daty\Data - CSV.Outputs[Flat File Source Output].Columns[Dzień]"
+                      name="Dzień"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Wypełnienie czasu i daty\Data - CSV.Outputs[Flat File Source Output].Columns[Dzień_Tygodnia]"
+                      codePage="1250"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Wypełnienie czasu i daty\Data - CSV.Outputs[Flat File Source Output].ExternalColumns[Dzień_Tygodnia]"
+                      length="15"
+                      lineageId="Package\Wypełnienie czasu i daty\Data - CSV.Outputs[Flat File Source Output].Columns[Dzień_Tygodnia]"
+                      name="Dzień_Tygodnia"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Wypełnienie czasu i daty\Data - CSV.Outputs[Flat File Source Output].Columns[Czy_swieto]"
+                      codePage="1250"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Wypełnienie czasu i daty\Data - CSV.Outputs[Flat File Source Output].ExternalColumns[Czy_swieto]"
+                      length="128"
+                      lineageId="Package\Wypełnienie czasu i daty\Data - CSV.Outputs[Flat File Source Output].Columns[Czy_swieto]"
+                      name="Czy_swieto"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Wypełnienie czasu i daty\Data - CSV.Outputs[Flat File Source Output].ExternalColumns[ID_Daty]"
+                      dataType="guid"
+                      name="ID_Daty" />
+                    <externalMetadataColumn
+                      refId="Package\Wypełnienie czasu i daty\Data - CSV.Outputs[Flat File Source Output].ExternalColumns[Data]"
+                      dataType="date"
+                      name="Data" />
+                    <externalMetadataColumn
+                      refId="Package\Wypełnienie czasu i daty\Data - CSV.Outputs[Flat File Source Output].ExternalColumns[Rok]"
+                      codePage="1250"
+                      dataType="str"
+                      length="4"
+                      name="Rok" />
+                    <externalMetadataColumn
+                      refId="Package\Wypełnienie czasu i daty\Data - CSV.Outputs[Flat File Source Output].ExternalColumns[Miesiąc]"
+                      codePage="1250"
+                      dataType="str"
+                      length="15"
+                      name="Miesiąc" />
+                    <externalMetadataColumn
+                      refId="Package\Wypełnienie czasu i daty\Data - CSV.Outputs[Flat File Source Output].ExternalColumns[Dzień]"
+                      codePage="1250"
+                      dataType="str"
+                      length="10"
+                      name="Dzień" />
+                    <externalMetadataColumn
+                      refId="Package\Wypełnienie czasu i daty\Data - CSV.Outputs[Flat File Source Output].ExternalColumns[Dzień_Tygodnia]"
+                      codePage="1250"
+                      dataType="str"
+                      length="15"
+                      name="Dzień_Tygodnia" />
+                    <externalMetadataColumn
+                      refId="Package\Wypełnienie czasu i daty\Data - CSV.Outputs[Flat File Source Output].ExternalColumns[Czy_swieto]"
+                      codePage="1250"
+                      dataType="str"
+                      length="128"
+                      name="Czy_swieto" />
+                  </externalMetadataColumns>
+                </output>
+                <output
+                  refId="Package\Wypełnienie czasu i daty\Data - CSV.Outputs[Flat File Source Error Output]"
+                  isErrorOut="true"
+                  name="Flat File Source Error Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Wypełnienie czasu i daty\Data - CSV.Outputs[Flat File Source Error Output].Columns[Flat File Source Error Output Column]"
+                      codePage="1250"
+                      dataType="text"
+                      description="Flat File Source Error Output Column"
+                      lineageId="Package\Wypełnienie czasu i daty\Data - CSV.Outputs[Flat File Source Error Output].Columns[Flat File Source Error Output Column]"
+                      name="Flat File Source Error Output Column" />
+                    <outputColumn
+                      refId="Package\Wypełnienie czasu i daty\Data - CSV.Outputs[Flat File Source Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Wypełnienie czasu i daty\Data - CSV.Outputs[Flat File Source Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Wypełnienie czasu i daty\Data - CSV.Outputs[Flat File Source Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Wypełnienie czasu i daty\Data - CSV.Outputs[Flat File Source Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Wypełnienie czasu i daty\Data HD"
+              componentClassID="Microsoft.OLEDBDestination"
+              contactInfo="OLE DB Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;4"
+              description="OLE DB Destination"
+              name="Data HD"
+              usesDispositions="true"
+              version="4">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of the database object used to open a rowset."
+                  name="OpenRowset">[dbo].[Data]</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the variable that contains the name of the database object used to open a rowset."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1250</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Forces the use of the DefaultCodePage property value when describing character data."
+                  name="AlwaysUseDefaultCodePage">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the mode used to access the database."
+                  name="AccessMode"
+                  typeConverter="AccessMode">3</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the values supplied for identity columns will be copied to the destination. If false, values for identity columns will be auto-generated at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepIdentity">false</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the columns containing null will have null inserted in the destination. If false, columns containing null will have their default values inserted at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepNulls">false</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies options to be used with fast load.  Applies only if fast load is turned on."
+                  name="FastLoadOptions">TABLOCK,CHECK_CONSTRAINTS</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies when commits are issued during data insertion.  A value of 0 specifies that one commit will be issued at the end of data insertion.  Applies only if fast load is turned on."
+                  name="FastLoadMaxInsertCommitSize">2147483647</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Wypełnienie czasu i daty\Data HD.Connections[OleDbConnection]"
+                  connectionManagerID="{92BB8F9A-CAE1-48C1-9420-2BE2126C9E1C}:external"
+                  connectionManagerRefId="Project.ConnectionManagers[localhost.Kawiarnia]"
+                  description="The OLE DB runtime connection used to access the database."
+                  name="OleDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\Wypełnienie czasu i daty\Data HD.Inputs[OLE DB Destination Input]"
+                  errorOrTruncationOperation="Insert"
+                  errorRowDisposition="FailComponent"
+                  hasSideEffects="true"
+                  name="OLE DB Destination Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Wypełnienie czasu i daty\Data HD.Inputs[OLE DB Destination Input].Columns[Data]"
+                      cachedDataType="date"
+                      cachedName="Data"
+                      externalMetadataColumnId="Package\Wypełnienie czasu i daty\Data HD.Inputs[OLE DB Destination Input].ExternalColumns[Data]"
+                      lineageId="Package\Wypełnienie czasu i daty\Data - CSV.Outputs[Flat File Source Output].Columns[Data]" />
+                    <inputColumn
+                      refId="Package\Wypełnienie czasu i daty\Data HD.Inputs[OLE DB Destination Input].Columns[Rok]"
+                      cachedCodepage="1250"
+                      cachedDataType="str"
+                      cachedLength="4"
+                      cachedName="Rok"
+                      externalMetadataColumnId="Package\Wypełnienie czasu i daty\Data HD.Inputs[OLE DB Destination Input].ExternalColumns[Rok]"
+                      lineageId="Package\Wypełnienie czasu i daty\Data - CSV.Outputs[Flat File Source Output].Columns[Rok]" />
+                    <inputColumn
+                      refId="Package\Wypełnienie czasu i daty\Data HD.Inputs[OLE DB Destination Input].Columns[Miesiąc]"
+                      cachedCodepage="1250"
+                      cachedDataType="str"
+                      cachedLength="15"
+                      cachedName="Miesiąc"
+                      externalMetadataColumnId="Package\Wypełnienie czasu i daty\Data HD.Inputs[OLE DB Destination Input].ExternalColumns[Miesiac]"
+                      lineageId="Package\Wypełnienie czasu i daty\Data - CSV.Outputs[Flat File Source Output].Columns[Miesiąc]" />
+                    <inputColumn
+                      refId="Package\Wypełnienie czasu i daty\Data HD.Inputs[OLE DB Destination Input].Columns[Dzień_Tygodnia]"
+                      cachedCodepage="1250"
+                      cachedDataType="str"
+                      cachedLength="15"
+                      cachedName="Dzień_Tygodnia"
+                      externalMetadataColumnId="Package\Wypełnienie czasu i daty\Data HD.Inputs[OLE DB Destination Input].ExternalColumns[DzienTygodnia]"
+                      lineageId="Package\Wypełnienie czasu i daty\Data - CSV.Outputs[Flat File Source Output].Columns[Dzień_Tygodnia]" />
+                    <inputColumn
+                      refId="Package\Wypełnienie czasu i daty\Data HD.Inputs[OLE DB Destination Input].Columns[Czy_swieto]"
+                      cachedCodepage="1250"
+                      cachedDataType="str"
+                      cachedLength="128"
+                      cachedName="Czy_swieto"
+                      externalMetadataColumnId="Package\Wypełnienie czasu i daty\Data HD.Inputs[OLE DB Destination Input].ExternalColumns[Swieto]"
+                      lineageId="Package\Wypełnienie czasu i daty\Data - CSV.Outputs[Flat File Source Output].Columns[Czy_swieto]" />
+                    <inputColumn
+                      refId="Package\Wypełnienie czasu i daty\Data HD.Inputs[OLE DB Destination Input].Columns[Dzień]"
+                      cachedCodepage="1250"
+                      cachedDataType="str"
+                      cachedLength="10"
+                      cachedName="Dzień"
+                      externalMetadataColumnId="Package\Wypełnienie czasu i daty\Data HD.Inputs[OLE DB Destination Input].ExternalColumns[Dzien]"
+                      lineageId="Package\Wypełnienie czasu i daty\Data - CSV.Outputs[Flat File Source Output].Columns[Dzień]" />
+                  </inputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Wypełnienie czasu i daty\Data HD.Inputs[OLE DB Destination Input].ExternalColumns[ID_Daty]"
+                      dataType="i4"
+                      name="ID_Daty" />
+                    <externalMetadataColumn
+                      refId="Package\Wypełnienie czasu i daty\Data HD.Inputs[OLE DB Destination Input].ExternalColumns[Data]"
+                      dataType="dbTimeStamp"
+                      name="Data" />
+                    <externalMetadataColumn
+                      refId="Package\Wypełnienie czasu i daty\Data HD.Inputs[OLE DB Destination Input].ExternalColumns[Rok]"
+                      codePage="1250"
+                      dataType="str"
+                      length="4"
+                      name="Rok" />
+                    <externalMetadataColumn
+                      refId="Package\Wypełnienie czasu i daty\Data HD.Inputs[OLE DB Destination Input].ExternalColumns[Miesiac]"
+                      codePage="1250"
+                      dataType="str"
+                      length="15"
+                      name="Miesiac" />
+                    <externalMetadataColumn
+                      refId="Package\Wypełnienie czasu i daty\Data HD.Inputs[OLE DB Destination Input].ExternalColumns[Dzien]"
+                      codePage="1250"
+                      dataType="str"
+                      length="2"
+                      name="Dzien" />
+                    <externalMetadataColumn
+                      refId="Package\Wypełnienie czasu i daty\Data HD.Inputs[OLE DB Destination Input].ExternalColumns[DzienTygodnia]"
+                      codePage="1250"
+                      dataType="str"
+                      length="15"
+                      name="DzienTygodnia" />
+                    <externalMetadataColumn
+                      refId="Package\Wypełnienie czasu i daty\Data HD.Inputs[OLE DB Destination Input].ExternalColumns[Swieto]"
+                      codePage="1250"
+                      dataType="str"
+                      length="128"
+                      name="Swieto" />
+                  </externalMetadataColumns>
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Wypełnienie czasu i daty\Data HD.Outputs[OLE DB Destination Error Output]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="OLE DB Destination Error Output"
+                  synchronousInputId="Package\Wypełnienie czasu i daty\Data HD.Inputs[OLE DB Destination Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Wypełnienie czasu i daty\Data HD.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Wypełnienie czasu i daty\Data HD.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Wypełnienie czasu i daty\Data HD.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Wypełnienie czasu i daty\Data HD.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+          </components>
+          <paths>
+            <path
+              refId="Package\Wypełnienie czasu i daty.Paths[Flat File Source Output]"
+              endId="Package\Wypełnienie czasu i daty\Czas HD.Inputs[OLE DB Destination Input]"
+              name="Flat File Source Output"
+              startId="Package\Wypełnienie czasu i daty\Czas - CSV.Outputs[Flat File Source Output]" />
+            <path
+              refId="Package\Wypełnienie czasu i daty.Paths[Flat File Source Output1]"
+              endId="Package\Wypełnienie czasu i daty\Data HD.Inputs[OLE DB Destination Input]"
+              name="Flat File Source Output"
+              startId="Package\Wypełnienie czasu i daty\Data - CSV.Outputs[Flat File Source Output]" />
+          </paths>
+        </pipeline>
+      </DTS:ObjectData>
+    </DTS:Executable>
+  </DTS:Executables>
+  <DTS:DesignTimeProperties><![CDATA[<?xml version="1.0"?>
+<!--This CDATA section contains the layout information of the package. The section includes information such as (x,y) coordinates, width, and height.-->
+<!--If you manually edit this section and make a mistake, you can delete it. -->
+<!--The package will still be able to load normally but the previous layout information will be lost and the designer will automatically re-arrange the elements on the design surface.-->
+<Objects
+  Version="8">
+  <!--Each node below will contain properties that do not affect runtime behavior.-->
+  <Package
+    design-time-name="Package">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph">
+        <NodeLayout
+          Size="194.4,41.6"
+          Id="Package\Wypełnienie czasu i daty"
+          TopLeft="74.2857155507925,36.0941181532652" />
+      </GraphLayout>
+    </LayoutInfo>
+  </Package>
+  <TaskHost
+    design-time-name="Package\Wypełnienie czasu i daty">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        <NodeLayout
+          Size="129.6,41.6"
+          Id="Package\Wypełnienie czasu i daty\Data - CSV"
+          TopLeft="396.00000674384,47.576471008644" />
+        <NodeLayout
+          Size="117.6,41.6"
+          Id="Package\Wypełnienie czasu i daty\Czas HD"
+          TopLeft="115.428573394308,166.400002333697" />
+        <NodeLayout
+          Size="128.8,41.6"
+          Id="Package\Wypełnienie czasu i daty\Czas - CSV"
+          TopLeft="113.142859069669,49.5529418714319" />
+        <EdgeLayout
+          Id="Package\Wypełnienie czasu i daty.Paths[Flat File Source Output]"
+          TopLeft="175.885716231988,91.1529418714319">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,75.2470604622652"
+              Start="0,0"
+              End="0,67.7470604622652">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,67.7470604622652" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <NodeLayout
+          Size="118.4,41.6"
+          Id="Package\Wypełnienie czasu i daty\Data HD"
+          TopLeft="408.571435529359,160.894119903538" />
+        <EdgeLayout
+          Id="Package\Wypełnienie czasu i daty.Paths[Flat File Source Output1]"
+          TopLeft="464.285721136599,89.176471008644">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,71.7176488948941"
+              Start="0,0"
+              End="0,64.2176488948941">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,64.2176488948941" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <AnnotationLayout
+          Text=""
+          ParentId="Package\Wypełnienie czasu i daty"
+          FontInfo="{assembly:Null}"
+          Size="28.8,60"
+          Id="b5280250-73cf-406d-922b-a7493814ff26"
+          TopLeft="397.14286390616,170.682355334932" />
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\Wypełnienie czasu i daty\Data HD">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Wypełnienie czasu i daty\Czas HD">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+</Objects>]]></DTS:DesignTimeProperties>
+</DTS:Executable>
